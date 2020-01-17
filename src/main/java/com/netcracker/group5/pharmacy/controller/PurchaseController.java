@@ -17,7 +17,7 @@ public class PurchaseController {
 
     @GetMapping("/buy")
     public ResponseEntity<?> performPurchase(@RequestParam("id") List<Long> purchaseItemIdList) {
-        List<Long> acceptedPurchasesIdList acceptedPurchases = purchaseService.performPurchase(purchaseItemIdList);
+        List<Long> acceptedPurchasesIdList = purchaseService.performPurchase(purchaseItemIdList);
 
         return ResponseEntity.ok(acceptedPurchasesIdList);
     }
