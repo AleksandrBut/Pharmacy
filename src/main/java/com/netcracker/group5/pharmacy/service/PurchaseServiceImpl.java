@@ -13,7 +13,7 @@ public class PurchaseServiceImpl implements PurchaseService {
         ArrayList<Long> acceptedPurchasesIdList = new ArrayList<>(purchaseItemIdList.size());
 
         for (Long id : purchaseItemIdList) {
-            int randValue = (int) (Math.random() * 10);
+            double randValue = (Math.random() * 10);
 
             if (randValue < 7) {
                 acceptedPurchasesIdList.add(id);
